@@ -6,7 +6,7 @@ var alertOn = (price, message) => {
     mutations.forEach(function (mutation) {
       if (
         mutation.target.className === "showPrice" &&
-        toFloat(mutation.target.innerHTML) >= price
+        price >= toFloat(mutation.target.innerHTML)
       ) {
         alert(message);
         observer.disconnect();
